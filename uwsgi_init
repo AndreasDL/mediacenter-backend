@@ -1,0 +1,22 @@
+[uwsgi]
+#application's base folder
+base = /srv/http/medAPI/
+
+#python module to import
+app = api
+module = %(app)
+
+home = %(base)/py3
+pythonpath = %(base)
+
+#socket file's location
+socket = /srv/http/medAPI/%n.sock
+
+#permissions for the socket file
+chmod-socket    = 666
+
+#the variable that holds a flask application inside the module imported at line #6
+callable = app
+
+#location of log files
+logto = /var/log/uwsgi/%n.log

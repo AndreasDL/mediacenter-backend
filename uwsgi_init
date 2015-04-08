@@ -10,7 +10,7 @@ home = %(base)/py3
 pythonpath = %(base)
 
 #socket file's location
-socket = /srv/http/medAPI/%n.sock
+socket = /srv/http/medAPI/socket.sock
 
 #permissions for the socket file
 chmod-socket    = 666
